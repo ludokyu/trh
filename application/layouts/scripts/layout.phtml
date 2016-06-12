@@ -1,0 +1,59 @@
+<?php echo $this->doctype();
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+        <?php echo $this->headMeta(); ?>
+
+        <?php echo $this->headTitle('RHLabo'); ?>
+
+        <?php
+        $this->headLink()->prependStylesheet($this->BaseUrl("/css/style.css"));
+        $this->headLink(array('rel'=>'favicon', 'href'=>$this->BaseUrl("favicon.ico")), 'PREPEND');
+        echo $this->headLink();
+        ?>
+
+        <?php
+     //   $this->jQuery()->enable();
+       // echo $this->jQuery();
+        ?>
+
+        <?php echo $this->headScript();
+        ?>
+
+    </head>
+
+    <body>
+       
+        <div id="ca_id" class="container_all">
+            <div class="line">
+            
+                <?php
+              //  echo $this->render("header.phtml");
+                ?>
+                
+                <div id="contain" class='content' style='min-height:20px;position: relative;'>
+                         <div id="over_div">
+            <div id="over_div_content"></div>
+        </div>
+                    <div id="ariane" class='ariane'><?php echo $this->ariane; ?></div>
+                    <h1><?php echo $this->title; ?></h1>
+                    <div id="message">
+                        <?php
+                        echo $this->message;
+                        ?>
+                        
+                    </div><?php
+                    echo $this->layout()->content;
+                    ?>
+                    
+                    <br/>
+                </div>
+         
+        <?php
+      //  echo $this->render("footer.phtml");
+        ?>
+   </div>
+        </div>
+        <?php echo $this->InlineScript(); ?>
+    </body>
+</html>
