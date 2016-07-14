@@ -1,0 +1,17 @@
+<?php 
+  echo $this->fieldset("home","<img src='/img/logo_small.png' style='float:left;'/>"   
+          .$this->formButton("accueil","Accueil",array("onclick"=>"location.href='../index/Accueil'","style"=>""))
+          
+
+.  $this->formButton("btndocuments","Documents",array("onclick"=>"location.href='/".$this->controller."/Document'","style"=>"margin-left:20px;"))
+
+.  $this->formButton("btngestion","Application",array("onclick"=>"location.href='/".$this->controller."/Utilisation'","style"=>"margin-left:20px;"))
+ 
+.  $this->formButton("Btnimpression","Impressions",array("onclick"=>"location.href='/".$this->controller."/impression'","style"=>"margin-left:20px;"))
+.  $this->formButton("btnhistorique","Historique",array("onclick"=>"location.href='/".$this->controller."/Historique'","style"=>"margin-left:20px;"))
+.  $this->formButton("btnalerte","2 Alertes",array("onclick"=>"location.href='../index/alerte'","style"=>"float:right;font-weight:bold;color:red;"))
+          ."<h1>".$this->title."<h1/>",array()
+          );
+ 
+  
+ ?>

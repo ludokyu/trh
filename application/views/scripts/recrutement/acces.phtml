@@ -1,17 +1,31 @@
-<?php 
-
-  echo $this->fieldset("home",$this->formButton("accueil","Accueil",array("onclick"=>"location.href='../index/Accueil'","style"=>""))
-          
-         . $this->formButton("acces","Accès",array("onclick"=>"location.href=location.href+'/Acces'","style"=>"margin-left:20px;"))
-
-.  $this->formButton("documents","Documents",array("onclick"=>"location.href=location.href+'/Document'","style"=>"margin-left:20px;"))
-
-.  $this->formButton("gestion","Gestion",array("onclick"=>"location.href=location.href+'/Utilisation'","style"=>"margin-left:20px;"))
+ <?php
+                echo $this->render("header.phtml");
  
-.  $this->formButton("impression","Impressions",array("onclick"=>"location.href=location.href+'/impression'","style"=>"margin-left:20px;"))
-.  $this->formButton("historique","Historique",array("onclick"=>"location.href=location.href+'/Historique'","style"=>"margin-left:20px;"))
-.  $this->formButton("alerte","Alertes",array("onclick"=>"location.href='../index/alerte'","style"=>"float:right")),array());
+                ?>
+Recrutement : Gestion des Acces<?php
+echo $this->formButton("add","Ajouter un acces",array("onclick"=>"location.href='/".$this->controller."/formacces'","style"=>"margin-left:20px;"));
  
- 
- 
- ?>
+?><br/>
+Recrutement : Liste des autorisations  
+<br/>
+<table><tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>gestion des accès</th>
+        <th>Document</th>
+        <th>Gestion</th>
+        <th>Impression</th>
+        <th>Historique</th>
+        <th>Alerte</th>
+    </tr>
+    <tr>
+        <td>Coppée</td>
+        <td>Pascal</td>
+        <td>Oui</td>
+        <td>Oui</td>
+        <td>Oui</td>
+        <td>Oui</td>
+        <td>Oui</td>
+        <td>Oui</td>
+            
+    </tr></table>

@@ -1,12 +1,15 @@
 <?php
 
-class IndexController extends Zend_Controller_Action{
+class IndexController extends Zend_Controller_Action
+{
 
-    public function init(){
+    public function init()
+    {
         /* Initialize action controller here */
     }
 
-    public function indexAction(){
+    public function indexAction()
+    {
         // action body
      //   $this->view->title="Authentification";
         $this->view->headTitle()->prepend("Authentification");
@@ -28,7 +31,8 @@ class IndexController extends Zend_Controller_Action{
         $this->view->RHLabo_version=$this->getVersion();
     }
 
-    private function login($values){
+    private function login($values)
+    {
         Zend_Loader::loadClass('Zend_Filter_StripTags');
         $f=new Zend_Filter_StripTags();
         $username=$f->filter($values['username']);
@@ -57,9 +61,11 @@ class IndexController extends Zend_Controller_Action{
         else{
             return 'Échec de la connexion !<br/>Identifiant ou mot de passe incorrect';
         }
+    
     }
 
-    public function getVersion(){
+    public function getVersion()
+    {
         $bootstrap=$this->getInvokeArg('bootstrap');
         $ns=rtrim($bootstrap->getAppNamespace(), '_');
         // Récupère les paramètres sous la forme d'un tableau
@@ -68,32 +74,54 @@ class IndexController extends Zend_Controller_Action{
         return $config['version'];
     }
 
-    public function accesAction(){
+    public function accesAction()
+    {
         // action body
     }
 
-    public function documentAction(){
+    public function documentAction()
+    {
         // action body
     }
 
-    public function utilisationAction(){
+    public function utilisationAction()
+    {
         // action body
     }
 
-    public function impressionAction(){
+    public function impressionAction()
+    {
         // action body
     }
 
-    public function historiqueAction(){
+    public function historiqueAction()
+    {
         // action body
     }
 
-    public function alerteAction(){
+    public function alerteAction()
+    {
         // action body
     }
 
-    public function accueilAction(){
+    public function accueilAction()
+    {
         // action body
     }
 
+    public function formaccesAction()
+    {
+        // action body
+    }
+
+    public function addAction()
+    {
+        // action body
+    }
+
+    
 }
+
+
+
+

@@ -1,17 +1,36 @@
-<?php 
-
-  echo $this->fieldset("home",$this->formButton("accueil","Accueil",array("onclick"=>"location.href='../index/Accueil'","style"=>""))
-          
-         . $this->formButton("acces","Accès",array("onclick"=>"location.href=location.href+'/Acces'","style"=>"margin-left:20px;"))
-
-.  $this->formButton("documents","Documents",array("onclick"=>"location.href=location.href+'/Document'","style"=>"margin-left:20px;"))
-
-.  $this->formButton("gestion","Gestion",array("onclick"=>"location.href=location.href+'/Utilisation'","style"=>"margin-left:20px;"))
- 
-.  $this->formButton("impression","Impressions",array("onclick"=>"location.href=location.href+'/impression'","style"=>"margin-left:20px;"))
-.  $this->formButton("historique","Historique",array("onclick"=>"location.href=location.href+'/Historique'","style"=>"margin-left:20px;"))
-.  $this->formButton("alerte","Alertes",array("onclick"=>"location.href='../index/alerte'","style"=>"float:right")),array());
- 
- 
- 
- ?>
+ <?php
+                echo $this->render("header.phtml");
+  echo  $this->formButton("BtnDoc","Ajouter une formation à un utilisateur",array("onclick"=>"","style"=>""));
+  echo  $this->formButton("BtnDoc","Statistique",array("onclick"=>"","style"=>""));
+                ?>
+<br/>
+Liste des formations 
+<br/>
+<label>Utilisateur : </label><select><option>Tous</option></select>
+<label>Formateur : </label><select><option>Tous</option></select>
+<label>Evaluateur : </label><select><option>Tous</option></select>
+<label>Periode : </label><input type="date"><span style='float:left'> au </span><input type="date">
+<br/>
+<table><tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Formation</th>
+        <th>Formateur</th>
+        <th>Date</th>
+        <th>Durée</th>
+        <th>Evaluation</th>
+        <th>Evaluateur</th>
+        <th>Note</th>
+    </tr>
+    <tr>
+        <td>Durand</td>
+        <td>Isabelle</td>
+        <td>Coursier</td>
+        <td>Coppée</td>
+        <td>22/02/2016</td>
+        <td>7h</td>
+        <td>Document d'évaluation scanné</td>
+        <td>Coppée</td>
+        <td>15</td>
+            
+    </tr></table>

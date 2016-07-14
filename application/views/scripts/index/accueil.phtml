@@ -1,23 +1,27 @@
-<?php 
+<img src='/img/logo_login.png' style='float:left;'/><?php 
 
-  echo $this->fieldset("home",$this->formButton("recrutement","Recrutement",array("onclick"=>"location.href='../../Recrutement'","style"=>""))
+  echo $this->fieldset("home",$this->formButton("recrutement","Recrutement",array("onclick"=>"location.href='../../Recrutement/Utilisation'","style"=>""))
+.""
+.   $this->formButton("evaluation","Ré évaluation des compétences",array("onclick"=>"location.href='../../Evalcompetence/Utilisation'","style"=>"margin-left:30px;"))
 
-.   $this->formButton("evaluation","Ré évaluation des compétences",array("onclick"=>"location.href='../../Evalcompetence'","style"=>"margin-left:30px;"))
-
-
-.   $this->formButton("impression","Impressions",array("onclick"=>"location.href='../index/impression'","style"=>"float:right"))
-
-
-.   $this->formButton("integration","Integration",array("onclick"=>"location.href='../../Integration'","style"=>"clear:both;float:left;"))
+      
+.   $this->formButton("impression","Impressions",array("onclick"=>"location.href='../index/impression/Utilisation'","style"=>"float:right"))
+ 
+.   $this->formButton("integration","Integration",array("onclick"=>"location.href='../../Integration/Utilisation'","style"=>"clear:both;float:left;"))
 
  
-.   $this->formButton("entretien","Entretien Professionnel",array("onclick"=>"location.href='../../entretien'","style"=>"margin-left:30px;margin-top:20px;"))
+.   $this->formButton("entretien","Entretien Professionnel",array("onclick"=>"location.href='../../entretien/Utilisation'","style"=>"margin-left:30px;margin-top:20px;"))
  
 
-.   $this->formButton("formation","Formation",array("onclick"=>"location.href='../../Formation'","style"=>"clear:both;margin-top:20px;"))
-.   $this->formButton("habilitation","Habilitations",array("onclick"=>"location.href='../../Habilitation'","style"=>"clear:both;"))
+.   $this->formButton("formation","Formation",array("onclick"=>"location.href='../../Formation/Utilisation'","style"=>"clear:both;margin-top:20px;"))
+.   $this->formButton("habilitation","Habilitations",array("onclick"=>"location.href='../../Habilitation/Utilisation'","style"=>"clear:both;"))
  
-.    $this->formButton("alerte","Alertes",array("onclick"=>"location.href='../index/alerte'","style"=>"float:right")),array());
+.    $this->formButton("alerte","Alertes",array("onclick"=>"location.href='../../alerte/'","style"=>"float:right"))
+            . $this->formButton("Btnacces","Gestion des Accès",array("onclick"=>"location.href='/".$this->controller."/Acces'","style"=>"clear:both"))
+.   $this->formButton("param","Paramétrage",array("onclick"=>"location.href='../parametrage/'","style"=>"float:right"))
+,
+          array( "style"=>"width:640px;margin-left:-100px;margin-top:150px;border-radius:15px;float:left;")
+          );
  
  
  

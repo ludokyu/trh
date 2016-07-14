@@ -8,9 +8,24 @@ and open the template in the editor.
     Author     : ludovic
 */
 
-input{float:left; }
+input,select{float:left; }
 input[type=text]{padding-left:2px;}
 input[type=password]{padding-left:2px;}
-button{float:left; padding-left:20px;padding-right:20px; min-width:120px;margin-top:20px;}
+button,input[type="submit"]{float:left; padding-left:20px;padding-right:20px; min-width:120px;margin-top:20px;}
 label{float: left;width: 100px;}
 fieldset{width:auto;}
+#Version{position: fixed;bottom: 30px;right: 100px;}
+    table{border:solid 1px;border-collapse: collapse;border-spacing:0px}
+th, td{border:solid 1px; padding: 1px;}
+th{background-color: #c9c5c5;}
+br{clear: both;}
+h1{
+    margin-top:50px;margin-bottom: 0px;
+    color: #323781; 
+}
+
+#Recrutement{padding-left:100px;}
+#Recrutement label{clear:both;min-width:200px;width:auto;margin-top:7px;font-weight: bold}
+#Recrutement textarea{width:400px;height:80px;float:left;clear:both}
+#Recrutement button{clear: both;margin-left: 100px;}
+#Recrutement input[type=submit]{margin-left: 200px;}
