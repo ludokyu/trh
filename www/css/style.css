@@ -24,8 +24,19 @@ h1{
     color: #323781; 
 }
 
-#Recrutement{padding-left:100px;}
+.padding{
+    padding-left:30px;
+}
+form#Recrutement{padding-left:100px;}
 #Recrutement label{clear:both;min-width:200px;width:auto;margin-top:7px;font-weight: bold}
 #Recrutement textarea{width:400px;height:80px;float:left;clear:both}
 #Recrutement button{clear: both;margin-left: 100px;}
 #Recrutement input[type=submit]{margin-left: 200px;}
+
+
+form#entretien{padding-left:100px;}
+#entretien label{clear:both;min-width:200px;width:auto;margin-top:7px;font-weight: bold}
+#entretien textarea{width:400px;height:80px;float:left;clear:both}
+#entretien button{clear: both;margin-left: 100px;}
+#entretien input[type=submit]{margin-left: 200px;}
+

@@ -7,7 +7,7 @@ class RecrutementController extends Zend_Controller_Action
     {
        /* Initialize action controller here */
         $this->view->controller = $this->_request->getControllerName();
-        $this->view->title="Integration";
+        $this->view->title="Recrutement";
     }
 
     public function indexAction()

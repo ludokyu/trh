@@ -18,7 +18,7 @@ class Labo_Form_Default extends Zend_Form{
     }
 
     public function NewElement($type, $name, $label, $param=array()){
-        static $order=0;
+
 
         switch($type){
             case "html":
@@ -54,10 +54,12 @@ class Labo_Form_Default extends Zend_Form{
 
                 $default=array("text", "checkbox", "hidden", "textarea", "password", "select", "radio", "button", "reset", "file", "submit", "selectattrib", "DoubleMultiCheckbox", "MultiCheckbox", "multicheckbox", "html", "multitext");
 
-                if(in_array($type, $default))
+                if(in_array($type, $default)){
                     eval("\$element = new Zend_Form_Element_".ucfirst($type)."('$name');");
-                else
+                }
+                else{
                     $element=new Zend_Form_Element($name);
+                }
         }
 
 
@@ -76,10 +78,19 @@ class Labo_Form_Default extends Zend_Form{
             $element->addDecorators(array(array("Label")));
             $element->setLabel($label." : ");
         }
-        else
+        else{
             $element->setLabel($label);
+        }
 
         //parametrage
+        $this->SetParam($element, $param);
+
+        $this->addElement($element);
+        return $element;
+    }
+
+    public function SetParam(&$element, $param){
+        static $order=0;
         foreach($param as $key=> $p){
             switch($key){
                 case "required":
@@ -103,8 +114,9 @@ class Labo_Form_Default extends Zend_Form{
                     break;
 
                 case "decorators":
-                    foreach($p as $decorator=> $value)
+                    foreach($p as $decorator=> $value){
                         $element->addDecorator($decorator, $value);
+                    }
                     break;
 
                 case "options":
@@ -137,25 +149,27 @@ class Labo_Form_Default extends Zend_Form{
             }
         }
 
-        if(array_key_exists('jQueryParams', $param))
+        if(array_key_exists('jQueryParams', $param)){
             $element->setJQueryParams($param['jQueryParams']);
+        }
 
-        if(array_key_exists('filters', $param))
+        if(array_key_exists('filters', $param)){
             $element->setFilters($param['filters']);
-        else
+        }
+        else{
             $element->setFilters(array('StringTrim', 'StripTags'));
+        }
 
-        if(array_key_exists('description', $param))
+        if(array_key_exists('description', $param)){
             $element->setDescription($param['description']);
-        if(array_key_exists('order', $param))
+        }
+        if(array_key_exists('order', $param)){
             $element->setOrder($param['order']);
+        }
         else{
             $order++;
             $element->setOrder($order);
         }
-
-        $this->addElement($element);
-        return $element;
     }
 
 }
