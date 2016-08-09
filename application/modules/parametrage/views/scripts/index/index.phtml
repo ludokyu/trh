@@ -1,4 +1,5 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Index</b> and script/action name <b>index</b></p>
-</div>
+ <?php
+                echo $this->render("header_param.phtml");
+ echo  $this->formButton("BtnDoc","Gérer des droits d'accès",array("onclick"=>"location.href='".$this->baseUrl("parametrage/index/addacces")."'","style"=>""));
+ 
+                ?>

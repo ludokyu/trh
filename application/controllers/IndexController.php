@@ -6,6 +6,9 @@ class IndexController extends Zend_Controller_Action
     public function init()
     {
         /* Initialize action controller here */
+          /* Initialize action controller here */
+        $this->view->controller = $this->_request->getParam('a',$this->_request->getControllerName());
+        $this->view->title=$this->_request->getParam('a',$this->_request->getControllerName());
     }
 
     public function indexAction()
@@ -119,8 +122,18 @@ class IndexController extends Zend_Controller_Action
         // action body
     }
 
-    
+    public function adddocAction()
+    {
+        // action body
+        $form= new Labo_Form_Document();
+        $form->getElement("doc_part")->setValue($this->view->controller);
+        $this->view->form=$form;
+    }
+
+
 }
+
+
 
 
 

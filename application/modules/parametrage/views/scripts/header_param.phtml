@@ -1,0 +1,17 @@
+<?php 
+  echo $this->fieldset("home","<img src='/img/logo_small.png' style='float:left;'/>"   
+          .$this->formButton("accueil","Accueil",array("onclick"=>"location.href='".$this->baseUrl('/index/Accueil')."'","style"=>""))
+          
+
+.  $this->formButton("btnAcces","Gestion des Accès",array("onclick"=>"location.href='".$this->baseUrl('parametrage/index')."'","style"=>"margin-left:20px;"))
+
+.  $this->formButton("btnCompetence","Critère évaluation",array("onclick"=>"location.href='".$this->baseUrl('parametrage/competence')."'","style"=>"margin-left:20px;"))
+.  $this->formButton("btnPoste","Poste",array("onclick"=>"location.href='".$this->baseUrl('parametrage/poste')."'","style"=>"margin-left:20px;"))
+ .  $this->formButton("btnProfil","Profil",array("onclick"=>"location.href='".$this->baseUrl('parametrage/profil')."'","style"=>"margin-left:20px;"))
+.  $this->formButton("btnTache","Tache",array("onclick"=>"location.href='".$this->baseUrl('parametrage/tache')."'","style"=>"margin-left:20px;"))
+
+          ."<h1>".$this->title."<h1/>",array()
+          );
+ 
+  
+ ?>

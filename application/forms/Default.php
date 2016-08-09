@@ -47,6 +47,10 @@ class Labo_Form_Default extends Zend_Form{
                 $element=new Zend_Form_Element_Text($name);
                 $element->addValidator("float");
                 break;
+             case "number":
+                $element=new Zend_Form_Element_Text($name);
+                $element->addValidator("number");
+                break;
             case "date":
                 $element=new ZendX_JQuery_Form_Element_DatePicker($name);
                 break;

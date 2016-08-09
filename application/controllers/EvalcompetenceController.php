@@ -49,6 +49,11 @@ class EvalcompetenceController extends Zend_Controller_Action
         // action body
     }
 
+     public function addAction()
+    {
+        // action body
+         $this->view->form=new Labo_Form_Evaluation();
+    }
 
 }
 

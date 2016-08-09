@@ -40,3 +40,22 @@ form#entretien{padding-left:100px;}
 #entretien button{clear: both;margin-left: 100px;}
 #entretien input[type=submit]{margin-left: 200px;}
 
+
+
+form#DocumentForm{padding-left:100px;}
+#DocumentForm label{clear:both;min-width:200px;width:auto;margin-top:7px;font-weight: bold}
+#DocumentForm textarea{width:400px;height:80px;float:left;clear:both}
+#DocumentForm button{clear: both;margin-left: 100px;}
+#DocumentForm input[type=submit]{margin-left: 200px;}
+
+form#AccesForm{padding-left:100px;}
+#AccesForm label{clear:both;min-width:200px;width:auto;margin-top:7px;font-weight: bold}
+#AccesForm textarea{width:400px;height:80px;float:left;clear:both}
+#AccesForm button{clear: both;margin-left: 100px;}
+#AccesForm input[type=submit]{margin-left: 200px;}
+
+form#EvaluationForm{padding-left:100px;}
+#EvaluationForm label{clear:both;min-width:200px;width:auto;margin-top:7px;font-weight: bold}
+#EvaluationForm textarea{width:400px;height:80px;float:left;clear:both}
+#EvaluationForm button{clear: both;margin-left: 100px;}
+#EvaluationForm input[type=submit]{margin-left: 200px;}
