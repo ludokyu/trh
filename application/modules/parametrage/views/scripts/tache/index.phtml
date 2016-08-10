@@ -1,4 +1,5 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Tache</b> and script/action name <b>index</b></p>
-</div>
+<?php
+                echo $this->render("header_param.phtml");
+ echo  $this->formButton("BtnDoc","Ajouter une tache",array("onclick"=>"location.href='".$this->baseUrl("parametrage/competence/add")."'","style"=>""));
+ 
+                ?>

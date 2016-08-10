@@ -19,7 +19,6 @@ class Labo_Form_Default extends Zend_Form{
 
     public function NewElement($type, $name, $label, $param=array()){
 
-
         switch($type){
             case "html":
                 $element=new Zend_Form_Element_Hidden($name, array(
@@ -47,9 +46,16 @@ class Labo_Form_Default extends Zend_Form{
                 $element=new Zend_Form_Element_Text($name);
                 $element->addValidator("float");
                 break;
-             case "number":
+            case "number":
                 $element=new Zend_Form_Element_Text($name);
                 $element->addValidator("number");
+                break;
+            case "datalist":
+                $element=new Zend_Form_Element_Text($name);
+                $element->setAttrib("list", $name.'_datalist');
+                $element->setDecorators(array(
+                    array('description', array('tag'=>'datalist', 'id'=>$name.'_datalist','escape'=>false))
+                ));
                 break;
             case "date":
                 $element=new ZendX_JQuery_Form_Element_DatePicker($name);
@@ -65,7 +71,7 @@ class Labo_Form_Default extends Zend_Form{
                     $element=new Zend_Form_Element($name);
                 }
         }
-
+       
 
         //config par default
         $element->setName($name)
@@ -85,7 +91,7 @@ class Labo_Form_Default extends Zend_Form{
         else{
             $element->setLabel($label);
         }
-
+        $element->getView()->getHelper('doctype')->isHtml5();
         //parametrage
         $this->SetParam($element, $param);
 
@@ -95,6 +101,7 @@ class Labo_Form_Default extends Zend_Form{
 
     public function SetParam(&$element, $param){
         static $order=0;
+
         foreach($param as $key=> $p){
             switch($key){
                 case "required":
@@ -124,9 +131,16 @@ class Labo_Form_Default extends Zend_Form{
                     break;
 
                 case "options":
+
                     $element->addMultiOptions($p);
                     break;
-
+                case "datalist_options":
+                    $html="";
+                    foreach($p as $v){
+                        $html.="<option value=\"".$v."\">\n";
+                    }
+                    $element->setDescription($html);
+                    break;
                 case "value":
                     $element->setValue($p);
                     break;

@@ -1,53 +1,48 @@
 <?php
 
-class FormationController extends Zend_Controller_Action
-{
+class FormationController extends Zend_Controller_Action{
 
-    public function init()
-    {
+    public function init(){
         /* Initialize action controller here */
-        $this->view->controller = $this->_request->getControllerName();
+        $this->view->controller=$this->_request->getControllerName();
         $this->view->title="Formation";
     }
 
-    public function indexAction()
-    {
+    public function indexAction(){
         // action body
     }
 
-    public function accesAction()
-    {
+    public function accesAction(){
         // action body
     }
 
-    public function documentAction()
-    {
+    public function documentAction(){
         // action body
     }
 
-    public function utilisationAction()
-    {
+    public function utilisationAction(){
         // action body
     }
 
-    public function impressionAction()
-    {
+    public function impressionAction(){
         // action body
     }
 
-    public function historiqueAction()
-    {
+    public function historiqueAction(){
         // action body
     }
 
-    public function alerteAction()
-    {
+    public function alerteAction(){
         // action body
     }
 
-  public function formaccesAction()
-    {
+    public function formaccesAction(){
         // action body
     }
+
+    public function addAction(){
+        // action body
+        $this->view->form=new Labo_Form_Formation();
+    }
+
 }
-

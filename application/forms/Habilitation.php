@@ -1,6 +1,6 @@
 <?php
 
-class Labo_Form_Habilitation extends Zend_Form
+class Labo_Form_Habilitation extends Labo_Form_Default
 {
 
     public function init()
