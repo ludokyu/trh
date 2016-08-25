@@ -53,6 +53,7 @@ class IndexController extends Zend_Controller_Action
         if($result->isValid()){
             $this->view->message='Connexion réussi !';
             $identite=$result->getIdentity();
+            //Zend_Debug::dump($identite);
             $storage=$auth->getStorage();
             $storage->write($identite);
             $log=new Labo_Model_DbTable_Log();

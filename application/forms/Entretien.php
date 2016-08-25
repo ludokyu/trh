@@ -8,6 +8,7 @@ class Labo_Form_Entretien extends Labo_Form_Default{
         $this->NewElement('hidden', 'entretien_id', '');
 
         $this->NewElement('date', 'date_entretien', 'Date de l\'entretien');
+         $this->NewElement('date', 'date_validite', 'Date de validité de l\'entretien');
         $this->NewElement('html', 'Personne_entretien', 'Personne chargée de l\'entretien');
         $this->NewElement('text', 'Personne_entretien_nom_prenom', 'Nom, prénom ');
         $this->NewElement('text', 'Personne_entretien_fonction', 'Fonction ');

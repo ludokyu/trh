@@ -10,7 +10,7 @@ class Labo_Form_Evaluation extends Labo_Form_Default
         
           $this->NewElement('hidden', 'eval_id','');
          
-           
+          $this->NewElement('date', 'eval_date','Date d\'évaluation');
           $this->NewElement('date', 'eval_periode','Date de validité de l\'évaluation');
           $this->NewElement('select', 'fk_pers_id','Personne');
           $this->NewElement('select', 'fk_poste_id','Poste');
